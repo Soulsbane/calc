@@ -49,10 +49,10 @@ func main() {
 		if err != nil {
 			fmt.Println(err)
 		} else {
-			output, err := expr.Run(program, env)
+			output, runErr := expr.Run(program, env)
 
-			if err != nil {
-				fmt.Println(err)
+			if runErr != nil {
+				fmt.Println(runErr)
 			} else {
 				fmt.Println(output)
 			}
